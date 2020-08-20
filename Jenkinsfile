@@ -33,8 +33,14 @@ pipeline {
 					}
             }
         }
-        
-        
+        stage ('Functional Test') {
+            steps {
+            	dir('funtional-test') {
+    				git credentialsId: 'github_login', url: 'https://github.com/thaisbarbosa-atomic/tasks-functional-tests'
+            		bat 'mvn test'
+				}
+            }
+        }
         
     }
 }
