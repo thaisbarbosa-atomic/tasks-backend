@@ -46,7 +46,7 @@ public class TaskController {
 		return new ResponseEntity<Task>(saved, HttpStatus.CREATED);
 	}
 	
-	//funcionalidade deletar
+	//funcionalidade deletar tarefa
 	@DeleteMapping(value = "/{id}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
